@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Buah Management</title>
+</head>
+<body>
+<h2>Tambah Buah</h2>
+<form th:action="@{/buah/save}" method="post">
+  <input type="text" name="nama" placeholder="Nama Buah" required />
+  <button type="submit">Simpan</button>
+</form>
+
+<h2>Daftar Buah</h2>
+<table border="1">
+  <tr>
+    <th>Nama</th><th>Action</th>
+  </tr>
+  <tr th:each="b : ${buahList}">
+    <td th:text="${b.nama}"></td>
+    <td>
+      <a th:href="@{/buah/edit/{id}(id=${b.id})}">Edit</a>
+      <a th:href="@{/buah/delete/{id}(id=${b.id})}">Delete</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
