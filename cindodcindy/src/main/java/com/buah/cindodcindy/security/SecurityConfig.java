@@ -20,7 +20,7 @@ public class SecurityConfig {
     http
         .csrf(csrf -> csrf.disable()) // 👈 New style
         .authorizeHttpRequests(auth -> auth
-            .requestMatchers("/login", "/register", "/css/**").permitAll()
+            .requestMatchers("/login", "/register", "/css/**", "/buah/**").permitAll()
             .anyRequest().authenticated()
         )
         .sessionManagement(session -> session

@@ -2,6 +2,7 @@ package com.buah.cindodcindy.controller;
 
 import com.buah.cindodcindy.model.Buah;
 import com.buah.cindodcindy.model.User;
+import com.buah.cindodcindy.security.JwtUtil;
 import com.buah.cindodcindy.service.BuahService;
 import com.buah.cindodcindy.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
